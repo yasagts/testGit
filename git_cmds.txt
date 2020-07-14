@@ -1,0 +1,92 @@
+Subhashitam - 70
+65 - 259.
+
+Amrut Vachan - 192
+191 - Pujya Balasaheb dev ras ji ne kaha hai
+
+
+
+Command Line Utilities for SQL Server  – This gives you SQLCMD.exe
+Jenkins – Call SQLCMD.exe via Windows batch command in Jenkins
+
+With MS Command line utilities installed, create a new Jenkins Project and use the following in a Jenkins ‘Execute Windows batch command’ build step. 
+
+ORGANIZER
+PANCHJANYA
+WEYON
+
+
+What is CI/CD for databases. How to automate DB changes for pipelines
+https://www.youtube.com/watch?v=jiw8ueQxrZ8
+
+CI with Jenkins and Red Gate Oracle Tools
+https://www.youtube.com/watch?v=c-q_kNUzATE
+
+mp.gov.in/gad/rtiguidelines.html
+
+
+https://github.com/
+yasagts
+yasa.gts@gmail.com
+sunsolaris@143
+
+https://github.com/yasagts/testGit.git
+
+clone 
+configure git account for github repository
+git config --global user.name "yasagts"
+git config --global user.email  yasa.gts@gmail.com
+
+clone repository:$ git clone url
+git clone https://github.com/yasagts/testGit.git
+
+To add file to git repository: $git add filename
+git add testSQL.txt
+
+Check the status of the file: $git status
+git status
+
+Before transfer these files to github account, need to commit this file first, to upload them. $git commit -m "committed message" filename
+git commit -m "test committ0" testSQL.txt
+
+To transfer the file to github account. $git push -u origin master
+git push -u origin master
+----------------------------------------------------------------------------
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   testSQL.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+$ git commit -m "test committ-1" testSQL.txt
+[master 02fefa7] test committ-1
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/yasagts/testGit.git
+   8a64e2b..02fefa7  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+
+--------------------------------------------------------------------------------------------
+
+
+
+
+
+
