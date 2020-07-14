@@ -84,6 +84,53 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
 
 --------------------------------------------------------------------------------------------
+cd /d/projects/devOps/ws_git/testGit (master)
+git status
+git add git_cmds.txt
+git status
+git commit -m "test committ-1" git_cmds.txt
+git push -u origin master
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_cmds.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+$ git add git_cmds.txt
+
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   git_cmds.txt
+
+
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+$ git commit -m "test committ-1" git_cmds.txt
+[master 64b9d8b] test committ-1
+ 1 file changed, 92 insertions(+)
+ create mode 100644 git_cmds.txt
+
+syadav@syadav-t460 MINGW64 /d/projects/devOps/ws_git/testGit (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.44 KiB | 1.44 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/yasagts/testGit.git
+   02fefa7..64b9d8b  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 
 
