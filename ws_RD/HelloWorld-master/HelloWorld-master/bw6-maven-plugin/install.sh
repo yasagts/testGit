@@ -1,6 +1,6 @@
  #!/bin/bash
 echo "Installing Maven Plugin to Maven Repository"
-mvn install:install-file -Dfile=bw6-maven-plugin-2.0.1.jar -DpomFile=pom.xml
+mvn install:install-file -Dfile=bw6-maven-plugin-2.7.0.jar -DpomFile=pom.xml
 
 mvn install:install-file -Dfile=com.tibco.bw.palette.shared_6.1.100.003.jar -DgroupId=com.tibco.plugins -DartifactId=com.tibco.bw.palette.shared -Dversion=6.1.100 -Dpackaging=jar
 

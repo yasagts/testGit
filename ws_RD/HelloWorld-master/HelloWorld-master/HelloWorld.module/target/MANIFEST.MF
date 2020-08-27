@@ -1,8 +1,8 @@
-Manifest-Version: 1.0.0.202008271231
+Manifest-Version: 1.0.0.202008271412
 Bundle-ManifestVersion: 2
 Bundle-Name: HelloWorld Module
 Bundle-SymbolicName: HelloWorld.module
-Bundle-Version: 1.0.0.202008271231
+Bundle-Version: 1.0.0.202008271412
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
