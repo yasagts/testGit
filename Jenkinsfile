@@ -40,7 +40,7 @@ stage('Build Maven') { // for display purposes
  stage('Upload to Jfrog') { // for display purposes
  steps{
          echo 'Jfrog Artifactory Upload...'
-         sh "echo EAR Version - ${version}"
+         bat "echo EAR Version - ${version}"
          def server = Artifactory.server('artifactory-1-1023070707')
          def uploadSpec = """{
                              "files": [
@@ -56,14 +56,14 @@ stage('Build Maven') { // for display purposes
 //Stage 5: Deploy to SIT
  stage('Deploy') { // for display purposes
   steps{
-      echo 'Deploying..."
+      echo 'Deploying...'
       bat "mvn clean package"
        }
  }
 //Stage 6: Regression Test
  stage('Regression Test') { // for display purposes
   steps{
-      echo 'Regression Testing..$mvn -v"
+      echo 'Regression Testing..$mvn -v'
       bat "mvn -v"
        }
  }
