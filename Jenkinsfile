@@ -7,7 +7,6 @@ stages
   def APPLICATION_NAME = 'HelloWorld'
   def version
   def number = ''//env.BUILD_ID
-
 //Stage 1: SCM - Fetch code from GitHub repository 
 stage('SCM') { // for display purposes
 steps{
@@ -20,19 +19,15 @@ steps{
      mvnHome = tool 'LocalMaven'
        }
      }             
-
 //Stage 2: Build Maven
 stage('Build Maven') { // for display purposes
  steps{
      echo 'Building Maven..."
-     sh '''
-                   BUILDID=$BUILD_NUMBER
-                   Application_Name='HelloWorld'
-        '''
+     bat  "BUILDID=$BUILD_NUMBER"
+     bat "Application_Name='HelloWorld'"
      bat "mvn clean"
       }
  }
-
 //Stage 3: Archive Ear into Jenkins Job
  stage('Archive EAR') { // for display purposes
   steps{
@@ -41,7 +36,6 @@ stage('Build Maven') { // for display purposes
      archiveArtifacts "${APPLICATION_NAME}/target/*.ear"
       }
  }
- 
 //Stage 4: Upload to Jfrog artifatory 
  stage('Upload to Jfrog') { // for display purposes
  steps{
@@ -59,7 +53,6 @@ stage('Build Maven') { // for display purposes
          server.upload(uploadSpec)
      }
  }
- 
 //Stage 5: Deploy to SIT
  stage('Deploy') { // for display purposes
   steps{
@@ -67,7 +60,6 @@ stage('Build Maven') { // for display purposes
       bat "mvn clean package"
        }
  }
- 
 //Stage 6: Regression Test
  stage('Regression Test') { // for display purposes
   steps{
@@ -75,7 +67,6 @@ stage('Build Maven') { // for display purposes
       bat "mvn -v"
        }
  }
- 
  //Stage 7: Create Promotion job
  stage('Promote') { // for display purposes
   steps{
