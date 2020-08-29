@@ -22,7 +22,7 @@ steps{
 //Stage 2: Build Maven
 stage('Build Maven') { // for display purposes
  steps{
-     echo 'Building Maven..."
+     echo 'Building Maven...'
      bat  "BUILDID=$BUILD_NUMBER"
      bat "Application_Name='HelloWorld'"
      bat "mvn clean"
