@@ -2,12 +2,6 @@ pipeline {
 agent any
 stages
 {
-  def mvnHome
-  deleteDir()
-  def APPLICATION_NAME = 'HelloWorld'
-  def version
-  def number = ''//env.BUILD_ID
-
  //Stage 1: SCM - Fetch code from GitHub repository 
 stage('SCM') { // for display purposes
 steps{
@@ -26,7 +20,7 @@ stage('Build Maven') { // for display purposes
  steps{
      echo 'Building Maven...'
      // Run the maven build
-        withEnv(["MVN_HOME=$mvnHome"]) {
+        withEnv(["MVN_HOME=$LocalMaven"]) {
                 bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
@@ -36,8 +30,8 @@ stage('Build Maven') { // for display purposes
  stage('Archive EAR') { // for display purposes
   steps{
       echo 'Archive ear available in jenkins build page...'
-     archiveArtifacts "${APPLICATION_NAME}/target/*.ear"
+     archiveArtifacts "HelloWorld/target/*.ear"
+         }
       }
- }
- }
+   }
  }
