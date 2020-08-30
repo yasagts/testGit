@@ -11,7 +11,7 @@ steps{
      // Get the Maven tool.
      // ** NOTE: This 'M3' Maven tool must be configured
      // **       in the global configuration.          
-     mvnHome = tool 'LocalMaven'
+     //mvnHome = tool 'LocalMaven'
        }
      } 
 	 
@@ -20,7 +20,7 @@ stage('Build Maven') { // for display purposes
  steps{
      echo 'Building Maven...'
      // Run the maven build
-        withEnv(["MVN_HOME=$LocalMaven"]) {
+        withEnv(["MVN_HOME=C:\apache\apache-maven-3.6.3"]) {
                 bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
