@@ -20,7 +20,7 @@ stage('Build Maven') { // for display purposes
  steps{
      echo 'Building Maven...'
      // Run the maven build
-        withEnv(["MVN_HOME=C:\apache\apache-maven-3.6.3"]) {
+        withEnv(["MVN_HOME=C:\apache\apache-maven-3.6.3\"]) {
                 bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
