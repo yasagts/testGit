@@ -21,8 +21,8 @@ stage('Build Maven') { // for display purposes
      echo 'Building Maven...'
      // Run the maven build
         
-                bat  "C:\apache\apache-maven-3.6.3\bin\mvn" -Dmaven.test.failure.ignore clean package"
-      
+                bat(/"C:\apache\apache-maven-3.6.3\bin\"/)
+				bat("mvn clean package")      
    }
  }
  
