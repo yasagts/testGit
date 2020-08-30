@@ -35,3 +35,4 @@ stage('Build Maven') { // for display purposes
      archiveArtifacts "${APPLICATION_NAME}/target/*.ear"
       }
  }
+ }
